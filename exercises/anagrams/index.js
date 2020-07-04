@@ -10,7 +10,7 @@
 
 function anagrams(stringA, stringB) {
     // Sort the strings and compare
-    const sortString = (string) => string.replace(/[^\w]/g).split('').sort().join('')
+    const sortString = (string) => string.replace(/[^\w]/g, '').split('').sort().join('')
     return sortString(stringA) === sortString(stringB)
 }
 
