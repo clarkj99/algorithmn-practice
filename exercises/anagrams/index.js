@@ -10,7 +10,13 @@
 
 function anagrams(stringA, stringB) {
     // Sort the strings and compare
-    const sortString = (string) => string.replace(/[^\w]/g, '').split('').sort().join('')
+    const sortString = (string) =>
+        string
+            .replace(/[^\w]/g, '')
+            .split('')
+            .sort()
+            .join('')
+
     return sortString(stringA) === sortString(stringB)
 }
 
@@ -18,13 +24,16 @@ module.exports = anagrams;
 
 
 // function anagrams(stringA, stringB) {
-    // Iterate through the keys
 //     const charMap = string => {
 //         const map = {}
-//         const arr = string.replace(/[^\w]/g, "").toLowerCase()
+//         const arr = string
+//             .replace(/[^\w]/g, "")
+//             .toLowerCase()
+
 //         for (let char of arr) {
 //             map[char] = map[char] + 1 || 1
 //         }
+
 //         return map
 //     }
 
